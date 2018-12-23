@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.0-4 (2018/12/23)
+
+* Upgrade to HandBrake 1.2.0
+
 ## 1.1.2-3 (2018/09/10)
 
 * Upgrade to HandBrake 1.1.2
