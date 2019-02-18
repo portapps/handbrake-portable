@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.1-1 (2019/02/18)
+
+* Upgrade to HandBrake 1.2.1
+* Add checksums (portapps/portapps#11)
+
 ## 1.2.0-4 (2018/12/23)
 
 * Upgrade to HandBrake 1.2.0
