@@ -7,27 +7,34 @@ import (
 	"path"
 
 	. "github.com/portapps/portapps"
+	"github.com/portapps/portapps/pkg/utl"
+)
+
+var (
+	app *App
 )
 
 func init() {
-	Papp.ID = "handbrake-portable"
-	Papp.Name = "HandBrake"
-	Init()
+	var err error
+
+	// Init app
+	if app, err = New("handbrake-portable", "HandBrake"); err != nil {
+		Log.Fatal().Err(err).Msg("Cannot initialize application. See log file for more info.")
+	}
 }
 
 func main() {
-	Papp.AppPath = AppPathJoin("app")
-	Papp.DataPath = CreateFolder(AppPathJoin("data"))
+	utl.CreateFolder(app.DataPath)
+	app.Process = utl.PathJoin(app.AppPath, "HandBrake.exe")
 
-	Papp.Process = PathJoin(Papp.AppPath, "HandBrake.exe")
-	Papp.Args = []string{}
-	Papp.WorkingDir = Papp.AppPath
+	defer func() {
+		handbrakeTeamPath := path.Join(utl.RoamingPath(), "HandBrake Team")
+		if _, err := os.Stat(handbrakeTeamPath); err == nil {
+			if err := os.RemoveAll(handbrakeTeamPath); err != nil {
+				Log.Error().Err(err).Msg("Cannot remove old appdata folder")
+			}
+		}
+	}()
 
-	Launch(os.Args[1:])
-
-	// Remove HandBrake Team folder
-	handbrakeTeamPath := path.Join(os.Getenv("APPDATA"), "HandBrake Team")
-	if _, err := os.Stat(handbrakeTeamPath); err == nil {
-		os.RemoveAll(handbrakeTeamPath)
-	}
+	app.Launch(os.Args[1:])
 }
