@@ -12,13 +12,15 @@
 
 ## Notice of Non-Affiliation and Disclaimer
 
-Portapps is not affiliated, associated, authorized, endorsed by, or in any way officially connected with HandBrake, or any of its subsidiaries or its affiliates. The official HandBrake website can be found at https://handbrake.fr.
+Portapps is not affiliated, associated, authorized, endorsed by, or in any way officially connected with HandBrake™, or any of its subsidiaries or its affiliates.
 
-The name HandBrake® as well as related names, marks, emblems and images are registered trademarks of their respective owners.
+The official HandBrake™ website can be found at https://handbrake.fr.
+
+The name HandBrake™ as well as related names, marks, emblems and images are registered trademarks of their respective owners.
 
 ## About
 
-HandBrake portable app made with 🚀 [Portapps](https://portapps.io).<br />
+HandBrake™ portable app made with 🚀 [Portapps](https://portapps.io).<br />
 Documentation and downloads can be found on https://portapps.io/app/handbrake-portable/
 
 ## How can I help ?
