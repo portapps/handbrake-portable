@@ -4,7 +4,6 @@
   <a href="https://portapps.io/app/handbrake-portable/#download"><img src="https://img.shields.io/github/release/portapps/handbrake-portable.svg?style=flat-square" alt="GitHub release"></a>
   <a href="https://portapps.io/app/handbrake-portable/#download"><img src="https://img.shields.io/github/downloads/portapps/handbrake-portable/total.svg?style=flat-square" alt="Total downloads"></a>
   <a href="https://travis-ci.com/portapps/handbrake-portable"><img src="https://img.shields.io/travis/com/portapps/handbrake-portable/master.svg?style=flat-square" alt="Build Status"></a>
-  <a href="https://github.com/portapps/portapps"><img src="https://img.shields.io/badge/portapps-1.26.1-479fdb.svg?style=flat-square" alt="Portapps version"></a>
   <a href="https://goreportcard.com/report/github.com/portapps/handbrake-portable"><img src="https://goreportcard.com/badge/github.com/portapps/handbrake-portable?style=flat-square" alt="Go Report"></a>
   <a href="https://www.codacy.com/app/portapps/handbrake-portable"><img src="https://img.shields.io/codacy/grade/ed1274db38464b82adc4261d1b1a006b.svg?style=flat-square" alt="Code Quality"></a>
   <br /><a href="https://www.patreon.com/crazymax"><img src="https://img.shields.io/badge/donate-patreon-f96854.svg?logo=patreon&style=flat-square" alt="Support me on Patreon"></a>
