@@ -3,10 +3,6 @@ version: ~> 1.0
 os: windows
 language: shell
 
-env:
-  global:
-    - secure: sWpNGK8AfIco9qnfMCYaKfn0NJkQp1EwpKGvJeLCIcUyqGc2FgBbXF3IYsg2vR3dU44K3MWagntyM8Y3F7E+DkoKB7+6WR0Wi1ykH/4wY766gNEyKmSZz+lChD9s4KrXv1c1p6Qvwr3rXECeIIY8Si9Qoag7U+CQzZKVFz4kby3/xAAdoggv1NWcdJkpHMXLLsVc7fD5Z5v7tdAkyvM4qDI/drYvXuXENuykuGvN+GEyCKCxWlweZBB1D4iB+kszhJ7if3XQuKIEw+iVIgi5yN5GStyAdz2wHAMjj+jfHc0O0qkS5ckl66lrTV0Ba6VaHuzWrjkEKDcuvia4YkoXQUeOAIhaGlb+aenGy+fGfjIzv8FMWWLBOB9Q8gw0I97DHaX/ymVbzezLMiAGefVAzdfnYss2et0AOBcjvfDqZ8qRy9Pi7QcibFZ90YkNZpuJPcMXIQIhTRnAkQ/MNWJ9nq2ERvlO6x2C2SUXCyOK0zGyoJPz60fKcZ56GU2jsUrJC2ipBkERYVkQsdMA71Dn7/7PFq9ME59tmyYJfDdAgOYQw/E7dthObYsyjZIBxS7jLWCEO2pwjCoGTLHRhN0T7hw59wGW8AIXH1aEQOXEdPmBDwe5uTx7DltXoWwsYsoILVAeOd+AV4Gtl1nEoBSFCN2L9loCa0AVg9zw2SLqM1M= # GITHUB_TOKEN
-
 import:
   - source: portapps/portapps:.travis/configs/install.yml
   - source: portapps/portapps:.travis/configs/build.yml
