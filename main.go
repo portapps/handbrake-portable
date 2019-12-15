@@ -10,15 +10,25 @@ import (
 	"github.com/portapps/portapps/pkg/utl"
 )
 
+type config struct {
+	Cleanup bool `yaml:"cleanup" mapstructure:"cleanup"`
+}
+
 var (
 	app *App
+	cfg *config
 )
 
 func init() {
 	var err error
 
+	// Default config
+	cfg = &config{
+		Cleanup: false,
+	}
+
 	// Init app
-	if app, err = New("handbrake-portable", "HandBrake"); err != nil {
+	if app, err = NewWithCfg("handbrake-portable", "HandBrake", cfg); err != nil {
 		Log.Fatal().Err(err).Msg("Cannot initialize application. See log file for more info.")
 	}
 }
@@ -27,14 +37,15 @@ func main() {
 	utl.CreateFolder(app.DataPath)
 	app.Process = utl.PathJoin(app.AppPath, "HandBrake.exe")
 
-	defer func() {
-		handbrakeTeamPath := path.Join(utl.RoamingPath(), "HandBrake Team")
-		if _, err := os.Stat(handbrakeTeamPath); err == nil {
-			if err := os.RemoveAll(handbrakeTeamPath); err != nil {
-				Log.Error().Err(err).Msg("Cannot remove old appdata folder")
-			}
-		}
-	}()
+	// Cleanup on exit
+	if cfg.Cleanup {
+		defer func() {
+			utl.Cleanup([]string{
+				path.Join(os.Getenv("APPDATA"), "HandBrake"),
+				path.Join(os.Getenv("APPDATA"), "HandBrake Team"),
+			})
+		}()
+	}
 
 	app.Launch(os.Args[1:])
 }
