@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.1-5 (2020/01/06)
+
+* HandBrake 1.3.1
+* Add `cleanup` config
+* Portapps 1.31.0
+
 ## 1.3.0-4 (2019/11/12)
 
 * HandBrake 1.3.0
