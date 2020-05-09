@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.2-6 (2020/05/09)
+
+* HandBrake 1.3.2
+* Portapps 2.2.4
+
 ## 1.3.1-5 (2020/01/06)
 
 * HandBrake 1.3.1
