@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.7.2-9 (2023/12/26)
+
+* HandBrake 1.5.1
+* Portapps 3.9.0
+
 ## 1.5.1-8 (2022/03/06)
 
 * HandBrake 1.5.1
